@@ -22,12 +22,17 @@ const forecast = (long, lat, callback) => {
                 currentTemp +
                 " but feels like " +
                 feelsLike +
-                ".";
+                "." +
+                " Humidity is " +
+                responseData.humidity +
+                "% and visibility is " +
+                responseData.visibility +
+                "%.";
             callback(undefined, {
                 currentTemp,
                 feelsLike,
                 weatherDesc,
-                summary
+                summary,
             });
         }
     });
